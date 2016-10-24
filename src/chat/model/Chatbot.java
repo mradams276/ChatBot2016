@@ -31,6 +31,7 @@ public class Chatbot
 
 	private void buildMemesList()
 	{
+		List memesList items = new ArrayList<>();
 		memesList.add("joey salads");
 		memesList.add("pepe");
 		memesList.add("cute");
