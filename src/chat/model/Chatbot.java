@@ -1,6 +1,7 @@
 package chat.model;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Base version of the 2015 Chatbot class. Only stub methods are provided.
@@ -31,7 +32,10 @@ public class Chatbot
 
 	private void buildMemesList()
 	{
-		List memesList items = new ArrayList<>();
+		Iterator<String> memeList = new ArrayList<String>();
+		String item = memeList.next();
+		System.out.println(content);
+		
 		memesList.add("joey salads");
 		memesList.add("pepe");
 		memesList.add("cute");
@@ -72,9 +76,9 @@ public class Chatbot
 		politicalTopicList.add("Stein");
 		politicalTopicList.add("Johnson");
 		politicalTopicList.add("election");
-		politicalTopicList.add("");
-		politicalTopicList.add("");
-		politicalTopicList.add("");
+		politicalTopicList.add("tea party");
+		politicalTopicList.add("Vladmir Putin");
+		politicalTopicList.add("gun controll");
 		
 		
 		
