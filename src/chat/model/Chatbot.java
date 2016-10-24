@@ -22,15 +22,61 @@ public class Chatbot
 	{
 		memesList = new ArrayList<String>();
 		politicalTopicList = new ArrayList<String>();
-		
+		buildMemesList();
+		politicalTopicList = new ArrayList<String>();
+		buildPoliticalTopicsList();
+		this.userName = userName;
+		this.content = "AnimeLover";
 	}
 
 	private void buildMemesList()
 	{
+		memesList.add("joey salads");
+		memesList.add("pepe");
+		memesList.add("cute");
+		memesList.add("cute animals");
+		memesList.add("cat");
+		memesList.add("dog");
+		memesList.add("excuse me princess");
+		memesList.add("spaghetti");
+		memesList.add("that's pretty good");
+		memesList.add("dat boi");
+		memesList.add("trump");
+		memesList.add("idubbbz");
+		memesList.add("filthy frank");
+		memesList.add("john cena");
+		memesList.add("harambe");
+		memesList.add("willy wonka");
+		memesList.add("grumpy cat");
+		memesList.add("skrek");
+		memesList.add("doge");
+		memesList.add("gg");
+		memesList.add("bastion");
 	}
 
 	private void buildPoliticalTopicsList()
 	{
+		politicalTopicList.add("Democrat");
+		politicalTopicList.add("Republican");
+		politicalTopicList.add("11/4/16");
+		politicalTopicList.add("11/8/16");
+		politicalTopicList.add("republican");
+		politicalTopicList.add("democrat");
+		politicalTopicList.add("liberal");
+		politicalTopicList.add("conservative");
+		politicalTopicList.add("Clinton");
+		politicalTopicList.add("Trump");
+		politicalTopicList.add("Kaine");
+		politicalTopicList.add("Pence");
+		politicalTopicList.add("Stein");
+		politicalTopicList.add("Johnson");
+		politicalTopicList.add("election");
+		politicalTopicList.add("");
+		politicalTopicList.add("");
+		politicalTopicList.add("");
+		
+		
+		
 	}
 
 	/**
@@ -60,7 +106,14 @@ public class Chatbot
 	 */
 	public boolean contentChecker(String currentInput)
 	{
-		return false;
+		boolean hasContent = false;
+		
+		if (currentInput.contains(content))
+		{
+			hasContent = true;
+		}
+		
+		return hasContent;
 	}
 
 	/**
@@ -133,5 +186,6 @@ public class Chatbot
 	public void setContent(String content)
 	{
 	}
+
 
 }
