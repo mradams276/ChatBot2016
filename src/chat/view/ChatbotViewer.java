@@ -13,7 +13,7 @@ public class ChatbotViewer
 		
 		return response;
 	}
-	public void displayMessae(String message)
+	public void displayMessage(String message)
 	{
 		JOptionPane.showMessageDialog(null,  message);
 	}

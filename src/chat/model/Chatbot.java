@@ -32,9 +32,6 @@ public class Chatbot
 
 	private void buildMemesList()
 	{
-		Iterator<String> memeList = new ArrayList<String>();
-		String item = memeList.next();
-		System.out.println(content);
 		
 		memesList.add("joey salads");
 		memesList.add("pepe");

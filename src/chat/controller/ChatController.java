@@ -16,17 +16,29 @@ public class ChatController
 		
 		public void start()
 		{
-			String response = "words";
+			String response = display.collectResponse("Lets talk boiiiiiiii");
 			
 			while(stupidBot.lengthChecker(response))
 			{
+				display.displayMessage(useChatbotCheckers(response));
+				response = display.collectResponse("So you have " + response + " on your mind?  Coolio lets talk");
 				
-				response = display.collectResponse("Lets talk boiiiiiiii");
 			}
-			
-			
 			
 		}
 
-	
+	private String useChatbotCheckers(String input)
+	{
+		String checkedInput = "Whatchu talking bout Wallace?";
+		
+		if(stupidBot.memeChecker(input))
+		{
+			checkedInput = "\nYou like memes!\n";
+		}
+		if(stupidBot.contentChecker(input))
+		{
+			checkedInput += "\nYou know my secret topic!\n";
+		}
+		return checkedInput;
+	}
 }
