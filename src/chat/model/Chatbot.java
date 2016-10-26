@@ -129,9 +129,16 @@ public class Chatbot
 	 */
 	public boolean politicalTopicChecker(String currentInput)
 	{
-		return false;
+		boolean hasMeme = false;
+		
+		if (politicialTopicChecker.contains(currentInput))
+		{
+			hasMeme true;
+		}
+		return poloticialTopicList;
+	
 	}
-
+	
 	/**
 	 * * Checks to see that the supplied String value is in the current
 	 * memesList variable.

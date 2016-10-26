@@ -29,15 +29,20 @@ public class ChatController
 
 	private String useChatbotCheckers(String input)
 	{
-		String checkedInput = "Whatchu talking bout Wallace?";
+		String checkedInput = "";
 		
 		if(stupidBot.memeChecker(input))
 		{
-			checkedInput = "\nYou like memes!\n";
+			checkedInput += "\nYou like memes!\n";
 		}
 		if(stupidBot.contentChecker(input))
 		{
 			checkedInput += "\nYou know my secret topic!\n";
+		}
+		
+		if(checkedInput.length() ==0)
+		{
+			checkedInput = "Watchu talking bout Wallace?";
 		}
 		return checkedInput;
 	}
