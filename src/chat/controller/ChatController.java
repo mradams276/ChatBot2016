@@ -10,7 +10,7 @@ public class ChatController
 		
 		public ChatController()
 		{
-			stupidBot = new Chatbot("joes mom");
+			stupidBot = new Chatbot("your mom");
 			display = new ChatbotViewer();
 		}
 		
@@ -40,7 +40,7 @@ public class ChatController
 			checkedInput += "\nYou know my secret topic!\n";
 		}
 		
-		if(checkedInput.length() ==0)
+		if(checkedInput.length() == 0)
 		{
 			checkedInput = "Watchu talking bout Wallace?";
 		}
