@@ -18,7 +18,7 @@ public class ChatbotViewer
 		JOptionPane.showMessageDialog(null,  message);
 	}
 
-	publicnt collectUserOption(String question)
+	public int collectUserOption(String question)
 	{
 		int response = 0;
 		
