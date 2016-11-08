@@ -8,7 +8,8 @@ public class ChatbotViewer
 {
 	private String windowMessage;
 	private ImageIcon chatIcon;
-	public void ChatView()
+	
+	public ChatbotViewer()
 	{
 		windowMessage = "This message brought to you by me, Chatbot!";
 		chatIcon = new ImageIcon(getClass().getResource("images/chatbot.jpg"));
@@ -19,7 +20,7 @@ public class ChatbotViewer
 	{
 		String response = "";
 		
-		response = JOptionPane.showInputDialog(null, question);
+		response = JOptionPane.showInputDialog(null, question, windowMessage, JOptionPane.INFORMATION_MESSAGE, chatIcon, null, "Type here plesase")+"";
 		
 		return response;
 	}
@@ -32,7 +33,7 @@ public class ChatbotViewer
 	{
 		int response = 0;
 		
-		response = JOptionPane.showConfirmDialog(null, question);
+		response = JOptionPane.showConfirmDialog(null, question, windowMessage,  JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, chatIcon);
 		
 		return response;
 	}
