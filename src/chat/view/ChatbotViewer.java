@@ -11,7 +11,7 @@ public class ChatbotViewer
 	
 	public ChatbotViewer()
 	{
-		windowMessage = "This message brought to you by me, Chatbot!";
+		windowMessage = "This Message Is Brought To You By Me, Chatbot!";
 		chatIcon = new ImageIcon(getClass().getResource("images/chatbot.jpg"));
 		
 	}
@@ -20,7 +20,7 @@ public class ChatbotViewer
 	{
 		String response = "";
 		
-		response = JOptionPane.showInputDialog(null, question, windowMessage, JOptionPane.INFORMATION_MESSAGE, chatIcon, null, "Type here plesase")+"";
+		response = JOptionPane.showInputDialog(null, question, windowMessage, JOptionPane.INFORMATION_MESSAGE, chatIcon, null, "Type response here")+"";
 		
 		return response;
 	}
