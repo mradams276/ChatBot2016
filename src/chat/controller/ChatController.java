@@ -2,17 +2,21 @@ package chat.controller;
 
 import chat.model.Chatbot; 
 import chat.view.ChatbotViewer;
+import chat.view.ChatFrame;
 
 public class ChatController
 {
 	private Chatbot stupidBot;
 	private ChatbotViewer display;
+	
 		
 	public ChatController()
 		{
 			stupidBot = new Chatbot("your mom");
 			display = new ChatbotViewer();
 		}
+	
+	private ChatFrame appFrame;
 		
 	public void start()
 		{
@@ -41,7 +45,7 @@ public class ChatController
 			checkedInput += "\nYou know my secret topic!\n";
 		}
 		
-		if(checkedInput.length() == 0)
+		if(stupidBot.lengthChecker(checkedInput))
 		{
 			checkedInput = "Watchu talking bout Wallace?";
 		}
