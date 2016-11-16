@@ -5,16 +5,16 @@ import chat.view.ChatbotViewer;
 
 public class ChatController
 {
-		private Chatbot stupidBot;
-		private ChatbotViewer display;
+	private Chatbot stupidBot;
+	private ChatbotViewer display;
 		
-		public ChatController()
+	public ChatController()
 		{
 			stupidBot = new Chatbot("your mom");
 			display = new ChatbotViewer();
 		}
 		
-		public void start()
+	public void start()
 		{
 			String response = display.collectResponse("Lets talk boiiiiiiii");
 			
@@ -27,7 +27,8 @@ public class ChatController
 			
 		}
 
-	private String useChatbotCheckers(String input)
+	public String useChatbotCheckers(String input)
+
 	{
 		String checkedInput = "";
 		
