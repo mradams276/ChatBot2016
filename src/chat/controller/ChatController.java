@@ -8,34 +8,29 @@ public class ChatController
 {
 	private Chatbot stupidBot;
 	private ChatbotViewer display;
+	private ChatFrame appFrame;
+	
+	public void start()
+		{
+			
+		}
 	
 		
 	public ChatController()
 		{
 			stupidBot = new Chatbot("your mom");
 			display = new ChatbotViewer();
+			appFrame = new ChatFrame(this);
 		}
 	
-	private ChatFrame appFrame;
-		
-	public void start()
-		{
-			String response = display.collectResponse("Lets talk boiiiiiiii");
-			
-			while(stupidBot.lengthChecker(response))
-			{
-				display.displayMessage(useChatbotCheckers(response));
-				response = display.collectResponse("So you have " + response + " on your mind?  Coolio lets talk");
-				
-			}
-			
-		}
+
 
 	public String useChatbotCheckers(String input)
 
 	{
 		String checkedInput = "";
-		
+		if(!stupidBot.quitChecker(input))
+		{
 		if(stupidBot.memeChecker(input))
 		{
 			checkedInput += "\nYou like memes!\n";
@@ -49,6 +44,13 @@ public class ChatController
 		{
 			checkedInput = "Watchu talking bout Wallace?";
 		}
-		return checkedInput;
+		
+		}
+	else
+	{
+		display.displayMessage("Thanks for talking to me!  Come back soon!!1!1!");
+		System.exit(0);
 	}
+	return checkedInput;
+}
 }
